@@ -134,6 +134,16 @@ console.log("[Question #12]:", product);
 
 // Question 13: Replace 'Goliath' with 'David' in the array
 const combatants = ["Goliath", "Soldier1", "Soldier2"];
+const updatedCombatants = [];
+
+for (const combatant of combatants) {
+  if (combatant === "Goliath") {
+    updatedCombatants.push("David");
+  } else {
+    updatedCombatants.push(combatant);
+  }
+}
+console.log("[Question #13]:", updatedCombatants);
 
 // Answer should be: ["David", "Soldier1", "Soldier2"]
 
@@ -171,6 +181,13 @@ for (const element of numbersFromBible) {
 
 // Question 17: Create a new string where the first letter of each word is capitalized
 const phrase = "in the beginning";
+const words1 = phrase.split(" ");
+let capitalizedPhrase = "";
+for (const word of words1) {
+  capitalizedPhrase += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+}
+capitalizedPhrase = capitalizedPhrase.trim();
+console.log("[Question #17]:", capitalizedPhrase);
 
 // Answer should be: In The Beginning
 
